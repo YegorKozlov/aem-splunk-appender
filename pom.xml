@@ -8,8 +8,8 @@
     <!-- P R O J E C T  D E S C R I P T I O N                                   -->
     <!-- ====================================================================== -->
     <version>1.0-SNAPSHOT</version>
-    <groupId>com.fleetcor.splunk</groupId>
-    <artifactId>com.fleetcor.splunk.bundle</artifactId>
+    <groupId>com.adobe.acs</groupId>
+    <artifactId>com.adobe.acs.splunk.appender</artifactId>
     <name>AEM Splunk HEC Appender</name>
 
     <properties>
