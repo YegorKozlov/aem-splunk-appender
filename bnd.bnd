@@ -1,0 +1,27 @@
+Import-Package: \
+        ch.qos.logback.*;resolution:=optional, \
+        org.apache.logging.log4j.*;resolution:=optional, \
+		!android.os*, \
+		!android.net*, \
+		!android.security*, \
+		!android.util*, \
+        !dalvik.*, \
+        !kotlin.internal.jdk7, \
+        !kotlin.internal.jdk8, \
+        !kotlin.reflect.jvm.internal, \
+		!org.conscrypt, \
+		!org.openjsse.javax.net.ssl, \
+		!org.openjsse.net.ssl, \
+		!org.bouncycastle.jce;resolution:=optional, \
+		!org.bouncycastle.jce.spec;resolution:=optional, \
+		!org.bouncycastle.jsse;resolution:=optional, \
+		!org.bouncycastle.jsse.provider;resolution:=optional, \
+        !sun.security.ssl;resolution:=optional, \
+    *
+Private-Package: \
+		okhttp3.*, \
+		com.splunk.*, \
+		kotlin.*;-split-package:=merge-first, \
+		okio.* 
+
+
