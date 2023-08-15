@@ -13,6 +13,7 @@
  */
 package com.adobe.acs.commons.splunk;
 
+import ch.qos.logback.classic.LoggerContext;
 import ch.qos.logback.classic.PatternLayout;
 import ch.qos.logback.classic.spi.ILoggingEvent;
 import ch.qos.logback.core.Appender;
@@ -91,8 +92,11 @@ public class SplunkHecAppenderActivator {
         if(configuration.debug()) {
             appender.setErrorCallback(StandardErrorCallback.class.getName());
         }
+        LoggerContext loggerContext = new LoggerContext();
         PatternLayout layout = new PatternLayout();
         layout.setPattern(configuration.log_pattern());
+        layout.setContext(loggerContext);
+        layout.start();
         appender.setLayout(layout);
 
         // To register an OSGi Appender we need to register a service that implements the ch.qos.logback.core.Appender interface,
